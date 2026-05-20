@@ -380,6 +380,83 @@
   footer .left strong { color: var(--white); font-style: normal; }
   footer .right { font-size: 12px; color: rgba(255,255,255,0.45); letter-spacing: 1px; text-transform: uppercase; }
 
+  /* ── GALLERY ── */
+  .gallery-section-wrapper {
+    margin-top: 80px;
+    padding-top: 80px;
+    border-top: 1px solid var(--border);
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin-top: 36px;
+  }
+
+  .gallery-card {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    border: 1px solid var(--border);
+    background: var(--blue-pale);
+    box-shadow: 0 4px 12px rgba(26,79,175,0.06);
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease;
+  }
+
+  .gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .gallery-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(26,79,175,0.15);
+  }
+
+  .gallery-card:hover img {
+    transform: scale(1.05);
+  }
+
+  .gallery-info {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top, rgba(20,61,138,0.9) 0%, rgba(20,61,138,0.4) 60%, rgba(20,61,138,0) 100%);
+    padding: 24px 20px 20px;
+    color: var(--white);
+    transform: translateY(10px);
+    opacity: 0;
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.3s ease;
+  }
+
+  .gallery-card:hover .gallery-info {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .gallery-tag {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--blue-mid);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .gallery-title {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--white);
+  }
+
   /* ── ANIMATIONS ── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
@@ -657,8 +734,67 @@
           <td>011 464 0933</td>
           <td><span class="badge badge-stationery">Stationery</span></td>
         </tr>
+        <tr>
+          <td class="proj-num">12.</td>
+          <td class="proj-name">Bankenveld Sewer Construction</td>
+          <td class="proj-year">2026</td>
+          <td>Thami Makhafola</td>
+          <td>071 121 5674</td>
+          <td><span class="badge badge-construction">Construction</span></td>
+        </tr>
       </tbody>
     </table>
+  </div>
+
+  <div class="gallery-section-wrapper fade-in">
+    <div class="section-heading">Project Showcase</div>
+    <div class="blue-rule"></div>
+    <p class="ref-intro">Take a look at some of our actual on-site work. Featured below is our current sewer construction project at Bankenveld (2026), showcasing our excavation, pipelaying, and civil engineering capabilities.</p>
+    
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <img src="assets/bankenveld_sewer_1.jpg" alt="Bankenveld Sewer Construction Site Excavation" loading="lazy">
+        <div class="gallery-info">
+          <span class="gallery-tag">Excavation & Trenching</span>
+          <h4 class="gallery-title">Site Preparation</h4>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="assets/bankenveld_sewer_2.jpg" alt="Pipelaying and Sewer Infrastructure" loading="lazy">
+        <div class="gallery-info">
+          <span class="gallery-tag">Infrastructure</span>
+          <h4 class="gallery-title">Pipelaying & Alignment</h4>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="assets/bankenveld_sewer_3.jpg" alt="Sewer Construction Civil Works" loading="lazy">
+        <div class="gallery-info">
+          <span class="gallery-tag">Civil Engineering</span>
+          <h4 class="gallery-title">Trench Compaction</h4>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="assets/bankenveld_sewer_4.jpg" alt="Bankenveld Pipe Installation" loading="lazy">
+        <div class="gallery-info">
+          <span class="gallery-tag">Pipelaying</span>
+          <h4 class="gallery-title">Sewer Main Installation</h4>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="assets/bankenveld_sewer_5.jpg" alt="Heavy Machinery Excavator Work" loading="lazy">
+        <div class="gallery-info">
+          <span class="gallery-tag">Earthworks</span>
+          <h4 class="gallery-title">Machinery Operation</h4>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="assets/bankenveld_sewer_6.jpg" alt="Sewer Connection & Inspection Chamber" loading="lazy">
+        <div class="gallery-info">
+          <span class="gallery-tag">Infrastructure</span>
+          <h4 class="gallery-title">Manhole & Connection Setup</h4>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 

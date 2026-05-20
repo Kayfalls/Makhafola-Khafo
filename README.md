@@ -44,6 +44,7 @@ Makhafola-Khafo Trading & Projects is a diversified service provider specializin
 
 | Project Name | Year | Sector | Reference Contact |
 | :--- | :---: | :---: | :---: |
+| **Bankenveld Sewer Construction** | 2026 | Construction | Thami Makhafola (071 121 5674) |
 | **Diepsloot Combined School** | 2024 | Stationery | Mrs. Makgalefa (011 464 0933) |
 | **Ekukhanyisweni Primary School** | 2023 | Stationery | Mam Yoli (011 443 5183) |
 | **Pan Mall Demolition** | 2022 | Construction | Pierre De Wett ((011) 886 6806) |
