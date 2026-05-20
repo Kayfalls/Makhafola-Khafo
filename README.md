@@ -6,7 +6,7 @@ Founded in 2013, Makhafola-Khafo is a South African company offering premium ser
 
 ---
 
-## 🚀 Key Highlights & Design Aesthetics
+## Key Highlights & Design Aesthetics
 
 *   **Elite Typography**: Styled using a premium pairing of *Playfair Display* (serif, for elegant headings) and *Source Sans 3* (sans-serif, for crisp body text).
 *   **Harmonious Color Palette**: Built on a curated corporate blue palette (`#1A4FAF`, `#143D8A`, `#EEF3FB`, `#D0DEFA`) for a premium and trustworthy visual appearance.
@@ -15,7 +15,7 @@ Founded in 2013, Makhafola-Khafo is a South African company offering premium ser
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 *   **Structure**: HTML5 (Semantic elements)
 *   **Styling**: Vanilla CSS3 (Custom properties/variables, modern grid layouts, custom transition animations)
@@ -24,7 +24,7 @@ Founded in 2013, Makhafola-Khafo is a South African company offering premium ser
 
 ---
 
-## 🏗️ Services Offered
+## Services Offered
 
 Makhafola-Khafo Trading & Projects is a diversified service provider specializing in:
 
@@ -40,7 +40,7 @@ Makhafola-Khafo Trading & Projects is a diversified service provider specializin
 
 ---
 
-## 📋 Selected Company References
+## Selected Company References
 
 | Project Name | Year | Sector | Reference Contact |
 | :--- | :---: | :---: | :---: |
@@ -57,7 +57,7 @@ Makhafola-Khafo Trading & Projects is a diversified service provider specializin
 
 ---
 
-## 🏢 Corporate Profile
+## Corporate Profile
 
 ### Registration & Compliance
 *   **Company Registration:** 2013/165731/07
@@ -74,7 +74,7 @@ Makhafola-Khafo Trading & Projects is a diversified service provider specializin
 
 ---
 
-## 💻 Local Development & Deployment
+## Local Development & Deployment
 
 To run and preview the website locally on your machine:
 
