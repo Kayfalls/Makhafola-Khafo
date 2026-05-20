@@ -348,6 +348,8 @@
 
   .contact-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 4px; }
   .contact-value { font-style: italic; font-size: 16px; color: var(--white); line-height: 1.5; }
+  .contact-value a { color: var(--white); text-decoration: none; border-bottom: 1px dotted rgba(255,255,255,0.4); transition: border-bottom-color 0.25s, opacity 0.25s; }
+  .contact-value a:hover { border-bottom-color: var(--white); opacity: 0.9; }
 
   .reg-panel { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; padding: 36px; }
 
@@ -457,6 +459,14 @@
     color: var(--white);
   }
 
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 28px;
+    border-radius: 4px;
+  }
+
   /* ── ANIMATIONS ── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
@@ -477,29 +487,32 @@
     .hero-blue-band { flex-direction: column; align-items: flex-start; }
     .hero-cta-block { align-items: flex-start; }
     .reg-items { grid-template-columns: 1fr; }
-    .projects-table th:nth-child(4), .projects-table td:nth-child(4),
-    .projects-table th:nth-child(5), .projects-table td:nth-child(5) { display: none; }
   }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="#hero" class="nav-logo">
-    <div class="nav-logo-badge">MK</div>
-    <div class="nav-logo-text">
-      <span class="brand">Makhafola-Khafo</span>
-      <span class="tagline">Trading &amp; Projects</span>
-    </div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact" class="nav-cta">Contact Us</a></li>
-  </ul>
-</nav>
+<!-- HEADER -->
+<header>
+  <!-- NAV -->
+  <nav>
+    <a href="#hero" class="nav-logo">
+      <div class="nav-logo-badge">MK</div>
+      <div class="nav-logo-text">
+        <span class="brand">Makhafola-Khafo</span>
+        <span class="tagline">Trading &amp; Projects</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
 
 <!-- HERO -->
 <section id="hero">
@@ -634,116 +647,118 @@
   </div>
 
   <div class="fade-in">
-    <table class="projects-table">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Project Name</th>
-          <th>Year</th>
-          <th>Contact Person</th>
-          <th>Contact No</th>
-          <th>Type</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="proj-num">1.</td>
-          <td class="proj-name">Malebogo RDP Project</td>
-          <td class="proj-year">2016</td>
-          <td>Adolf Notiso</td>
-          <td>082 474 7984</td>
-          <td><span class="badge badge-construction">Construction</span></td>
-        </tr>
-        <tr>
-          <td class="proj-num">2.</td>
-          <td class="proj-name">Refentse RDP Project</td>
-          <td class="proj-year">2014</td>
-          <td>Adolf Notiso</td>
-          <td>082 474 7984</td>
-          <td><span class="badge badge-construction">Construction</span></td>
-        </tr>
-        <tr>
-          <td class="proj-num">3.</td>
-          <td class="proj-name">Capricorn Municipality Refurbishment</td>
-          <td class="proj-year">2017</td>
-          <td>Triphina</td>
-          <td>072 404 2780</td>
-          <td><span class="badge badge-construction">Construction</span></td>
-        </tr>
-        <tr>
-          <td class="proj-num">4.</td>
-          <td class="proj-name">Pan Mall Demolition</td>
-          <td class="proj-year">2022</td>
-          <td>Pierre De Wett</td>
-          <td>(011) 886 6806</td>
-          <td><span class="badge badge-construction">Construction</span></td>
-        </tr>
-        <tr>
-          <td class="proj-num">5.</td>
-          <td class="proj-name">Auto Hub Alexandra Boundary Wall</td>
-          <td class="proj-year">2021</td>
-          <td>Nzulu GVK</td>
-          <td>072 700 0814</td>
-          <td><span class="badge badge-construction">Construction</span></td>
-        </tr>
-        <tr>
-          <td class="proj-num">6.</td>
-          <td class="proj-name">Fashion World Pan Mall Steel Shelving</td>
-          <td class="proj-year">2022</td>
-          <td>Moosa</td>
-          <td>082 336 4508</td>
-          <td><span class="badge badge-construction">Construction</span></td>
-        </tr>
-        <tr>
-          <td class="proj-num">7.</td>
-          <td class="proj-name">Ekukhanyisweni Primary School</td>
-          <td class="proj-year">2023</td>
-          <td>Mam Yoli</td>
-          <td>011 443 5183</td>
-          <td><span class="badge badge-stationery">Stationery</span></td>
-        </tr>
-        <tr>
-          <td class="proj-num">8.</td>
-          <td class="proj-name">Mikateka Primary School</td>
-          <td class="proj-year">2022</td>
-          <td>Mandla Sibanyoni</td>
-          <td>081 711 2087</td>
-          <td><span class="badge badge-stationery">Stationery</span></td>
-        </tr>
-        <tr>
-          <td class="proj-num">9.</td>
-          <td class="proj-name">PrimarySkeen School</td>
-          <td class="proj-year">2025</td>
-          <td>Mr Mashishi</td>
-          <td>011 264 6753</td>
-          <td><span class="badge badge-stationery">Stationery</span></td>
-        </tr>
-        <tr>
-          <td class="proj-num">10.</td>
-          <td class="proj-name">Nokuthula Special School</td>
-          <td class="proj-year">2021</td>
-          <td>Trevor</td>
-          <td>065 894 6012</td>
-          <td><span class="badge badge-stationery">Stationery</span></td>
-        </tr>
-        <tr>
-          <td class="proj-num">11.</td>
-          <td class="proj-name">Diepsloot Combined School</td>
-          <td class="proj-year">2024</td>
-          <td>Mrs. Makgalefa</td>
-          <td>011 464 0933</td>
-          <td><span class="badge badge-stationery">Stationery</span></td>
-        </tr>
-        <tr>
-          <td class="proj-num">12.</td>
-          <td class="proj-name">Bankenveld Sewer Construction</td>
-          <td class="proj-year">2026</td>
-          <td>Thami Makhafola</td>
-          <td>071 121 5674</td>
-          <td><span class="badge badge-construction">Construction</span></td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-responsive">
+      <table class="projects-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Project Name</th>
+            <th>Year</th>
+            <th>Contact Person</th>
+            <th>Contact No</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="proj-num">1.</td>
+            <td class="proj-name">Malebogo RDP Project</td>
+            <td class="proj-year">2016</td>
+            <td>Adolf Notiso</td>
+            <td>082 474 7984</td>
+            <td><span class="badge badge-construction">Construction</span></td>
+          </tr>
+          <tr>
+            <td class="proj-num">2.</td>
+            <td class="proj-name">Refentse RDP Project</td>
+            <td class="proj-year">2014</td>
+            <td>Adolf Notiso</td>
+            <td>082 474 7984</td>
+            <td><span class="badge badge-construction">Construction</span></td>
+          </tr>
+          <tr>
+            <td class="proj-num">3.</td>
+            <td class="proj-name">Capricorn Municipality Refurbishment</td>
+            <td class="proj-year">2017</td>
+            <td>Triphina</td>
+            <td>072 404 2780</td>
+            <td><span class="badge badge-construction">Construction</span></td>
+          </tr>
+          <tr>
+            <td class="proj-num">4.</td>
+            <td class="proj-name">Pan Mall Demolition</td>
+            <td class="proj-year">2022</td>
+            <td>Pierre De Wett</td>
+            <td>(011) 886 6806</td>
+            <td><span class="badge badge-construction">Construction</span></td>
+          </tr>
+          <tr>
+            <td class="proj-num">5.</td>
+            <td class="proj-name">Auto Hub Alexandra Boundary Wall</td>
+            <td class="proj-year">2021</td>
+            <td>Nzulu GVK</td>
+            <td>072 700 0814</td>
+            <td><span class="badge badge-construction">Construction</span></td>
+          </tr>
+          <tr>
+            <td class="proj-num">6.</td>
+            <td class="proj-name">Fashion World Pan Mall Steel Shelving</td>
+            <td class="proj-year">2022</td>
+            <td>Moosa</td>
+            <td>082 336 4508</td>
+            <td><span class="badge badge-construction">Construction</span></td>
+          </tr>
+          <tr>
+            <td class="proj-num">7.</td>
+            <td class="proj-name">Ekukhanyisweni Primary School</td>
+            <td class="proj-year">2023</td>
+            <td>Mam Yoli</td>
+            <td>011 443 5183</td>
+            <td><span class="badge badge-stationery">Stationery</span></td>
+          </tr>
+          <tr>
+            <td class="proj-num">8.</td>
+            <td class="proj-name">Mikateka Primary School</td>
+            <td class="proj-year">2022</td>
+            <td>Mandla Sibanyoni</td>
+            <td>081 711 2087</td>
+            <td><span class="badge badge-stationery">Stationery</span></td>
+          </tr>
+          <tr>
+            <td class="proj-num">9.</td>
+            <td class="proj-name">PrimarySkeen School</td>
+            <td class="proj-year">2025</td>
+            <td>Mr Mashishi</td>
+            <td>011 264 6753</td>
+            <td><span class="badge badge-stationery">Stationery</span></td>
+          </tr>
+          <tr>
+            <td class="proj-num">10.</td>
+            <td class="proj-name">Nokuthula Special School</td>
+            <td class="proj-year">2021</td>
+            <td>Trevor</td>
+            <td>065 894 6012</td>
+            <td><span class="badge badge-stationery">Stationery</span></td>
+          </tr>
+          <tr>
+            <td class="proj-num">11.</td>
+            <td class="proj-name">Diepsloot Combined School</td>
+            <td class="proj-year">2024</td>
+            <td>Mrs. Makgalefa</td>
+            <td>011 464 0933</td>
+            <td><span class="badge badge-stationery">Stationery</span></td>
+          </tr>
+          <tr>
+            <td class="proj-num">12.</td>
+            <td class="proj-name">Bankenveld Sewer Construction</td>
+            <td class="proj-year">2026</td>
+            <td>Thami Makhafola</td>
+            <td>071 121 5674</td>
+            <td><span class="badge badge-construction">Construction</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
   <div class="gallery-section-wrapper fade-in">
@@ -823,7 +838,9 @@
           <div class="contact-icon">✉️</div>
           <div>
             <div class="contact-label">Email Address</div>
-            <div class="contact-value">tradingcapstan@gmail.com</div>
+            <div class="contact-value">
+              <a href="#" class="secure-email" data-user="tradingcapstan" data-domain="gmail.com">Loading email...</a>
+            </div>
           </div>
         </div>
         <div class="contact-detail">
@@ -869,15 +886,32 @@
   </div>
 </section>
 
+</main>
+
 <!-- FOOTER -->
 <footer>
   <div class="left">
-    © 2025 <strong>Makhafola-Khafo Trading &amp; Projects</strong> &nbsp;·&nbsp; Reg: 2013/165731/07
+    © <span id="copyright-year">2026</span> <strong>Makhafola-Khafo Trading &amp; Projects</strong> &nbsp;·&nbsp; Reg: 2013/165731/07
   </div>
   <div class="right">Exceeding Our Client's Expectations · Trusted Since 2013</div>
 </footer>
 
 <script>
+  // Dynamic Copyright Year
+  document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+  // Secure Email Decrypter
+  document.querySelectorAll('.secure-email').forEach(el => {
+    const user = el.getAttribute('data-user');
+    const domain = el.getAttribute('data-domain');
+    if (user && domain) {
+      const email = `${user}@${domain}`;
+      el.setAttribute('href', `mailto:${email}`);
+      el.textContent = email;
+    }
+  });
+
+  // Intersection Observer for fade-in animations
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.08 });
