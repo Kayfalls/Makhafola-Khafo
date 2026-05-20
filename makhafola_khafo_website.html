@@ -14,9 +14,9 @@
     --blue-mid:   #D0DEFA;
     --white:      #FFFFFF;
     --off-white:  #F8F9FC;
-    --text:       #1A3F8F;
-    --text-body:  #1C4BAA;
-    --text-light: #4A72C4;
+    --text:       #111111;
+    --text-body:  #222222;
+    --text-light: #555555;
     --border:     #C8D8F5;
   }
 
@@ -67,7 +67,7 @@
 
   .nav-logo-text .brand {
     font-weight: 700; font-size: 15px;
-    color: var(--blue); letter-spacing: 0.5px; text-transform: uppercase;
+    color: #111111; letter-spacing: 0.5px; text-transform: uppercase;
   }
 
   .nav-logo-text .tagline {
@@ -106,7 +106,7 @@
   .hero-image-band {
     flex: 1; min-height: 52vh;
     background:
-      linear-gradient(135deg, rgba(20,61,138,0.72) 0%, rgba(26,79,175,0.55) 100%),
+      linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.15) 100%),
       url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&q=80') center/cover no-repeat;
     display: flex; align-items: flex-end;
     padding: 48px 8% 40px;
@@ -265,23 +265,43 @@
 
   .service-card {
     background: var(--white); border: 1px solid var(--border);
-    border-top: 3px solid var(--blue); padding: 32px 28px; border-radius: 2px;
-    transition: box-shadow 0.25s, transform 0.25s;
+    border-radius: 4px; overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    display: flex; flex-direction: column;
   }
 
-  .service-card:hover { box-shadow: 0 8px 32px rgba(26,79,175,0.14); transform: translateY(-4px); }
+  .service-card:hover { box-shadow: 0 12px 36px rgba(26,79,175,0.15); transform: translateY(-6px); }
+
+  .service-image-wrapper {
+    width: 100%; height: 160px; overflow: hidden;
+    position: relative;
+    border-bottom: 3px solid var(--blue);
+  }
+
+  .service-image-wrapper img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .service-card:hover .service-image-wrapper img {
+    transform: scale(1.06);
+  }
+
+  .service-card-body {
+    padding: 24px 20px;
+    display: flex; flex-direction: column;
+    flex-grow: 1;
+  }
 
   .service-num {
     font-family: 'Playfair Display', serif;
-    font-size: 36px; font-weight: 700;
-    color: var(--blue-mid); line-height: 1; margin-bottom: 14px;
+    font-size: 32px; font-weight: 700;
+    color: var(--border); line-height: 1; margin-bottom: 10px;
   }
-
-  .service-icon { font-size: 26px; margin-bottom: 10px; display: block; }
 
   .service-name {
     font-weight: 700; font-size: 13px;
-    color: var(--blue); text-transform: uppercase; letter-spacing: 1px;
+    color: var(--blue); text-transform: uppercase; letter-spacing: 1.5px;
   }
 
   /* ── PROJECTS ── */
@@ -591,49 +611,85 @@
 
   <div class="services-grid fade-in">
     <div class="service-card">
-      <div class="service-num">01</div>
-      <span class="service-icon">⛏️</span>
-      <div class="service-name">Earthworks</div>
+      <div class="service-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1541625602330-2277a4c46182?w=600&auto=format&fit=crop&q=80" alt="Earthworks" loading="lazy">
+      </div>
+      <div class="service-card-body">
+        <div class="service-num">01</div>
+        <div class="service-name">Earthworks</div>
+      </div>
     </div>
     <div class="service-card">
-      <div class="service-num">02</div>
-      <span class="service-icon">🛣️</span>
-      <div class="service-name">Roadworks</div>
+      <div class="service-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1515162305285-0293e4767cc2?w=600&auto=format&fit=crop&q=80" alt="Roadworks" loading="lazy">
+      </div>
+      <div class="service-card-body">
+        <div class="service-num">02</div>
+        <div class="service-name">Roadworks</div>
+      </div>
     </div>
     <div class="service-card">
-      <div class="service-num">03</div>
-      <span class="service-icon">🏘️</span>
-      <div class="service-name">Township Services</div>
+      <div class="service-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?w=600&auto=format&fit=crop&q=80" alt="Township Services" loading="lazy">
+      </div>
+      <div class="service-card-body">
+        <div class="service-num">03</div>
+        <div class="service-name">Township Services</div>
+      </div>
     </div>
     <div class="service-card">
-      <div class="service-num">04</div>
-      <span class="service-icon">⛽</span>
-      <div class="service-name">Diesel Supply</div>
+      <div class="service-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?w=600&auto=format&fit=crop&q=80" alt="Diesel Supply" loading="lazy">
+      </div>
+      <div class="service-card-body">
+        <div class="service-num">04</div>
+        <div class="service-name">Diesel Supply</div>
+      </div>
     </div>
     <div class="service-card">
-      <div class="service-num">05</div>
-      <span class="service-icon">🏗️</span>
-      <div class="service-name">Concrete Works</div>
+      <div class="service-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&auto=format&fit=crop&q=80" alt="Concrete Works" loading="lazy">
+      </div>
+      <div class="service-card-body">
+        <div class="service-num">05</div>
+        <div class="service-name">Concrete Works</div>
+      </div>
     </div>
     <div class="service-card">
-      <div class="service-num">06</div>
-      <span class="service-icon">🧱</span>
-      <div class="service-name">Building Works</div>
+      <div class="service-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1590069261209-f8e9b8642343?w=600&auto=format&fit=crop&q=80" alt="Building Works" loading="lazy">
+      </div>
+      <div class="service-card-body">
+        <div class="service-num">06</div>
+        <div class="service-name">Building Works</div>
+      </div>
     </div>
     <div class="service-card">
-      <div class="service-num">07</div>
-      <span class="service-icon">📋</span>
-      <div class="service-name">Construction Management</div>
+      <div class="service-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&auto=format&fit=crop&q=80" alt="Construction Management" loading="lazy">
+      </div>
+      <div class="service-card-body">
+        <div class="service-num">07</div>
+        <div class="service-name">Construction Management</div>
+      </div>
     </div>
     <div class="service-card">
-      <div class="service-num">08</div>
-      <span class="service-icon">📎</span>
-      <div class="service-name">Stationery Supply</div>
+      <div class="service-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&auto=format&fit=crop&q=80" alt="Stationery Supply" loading="lazy">
+      </div>
+      <div class="service-card-body">
+        <div class="service-num">08</div>
+        <div class="service-name">Stationery Supply</div>
+      </div>
     </div>
     <div class="service-card">
-      <div class="service-num">09</div>
-      <span class="service-icon">🧹</span>
-      <div class="service-name">Cleaning Services</div>
+      <div class="service-image-wrapper">
+        <img src="assets/cleaning_team.jpg" alt="Cleaning Services" loading="lazy">
+      </div>
+      <div class="service-card-body">
+        <div class="service-num">09</div>
+        <div class="service-name">Cleaning Services</div>
+      </div>
     </div>
   </div>
 </section>
@@ -764,7 +820,7 @@
   <div class="gallery-section-wrapper fade-in">
     <div class="section-heading">Project Showcase</div>
     <div class="blue-rule"></div>
-    <p class="ref-intro">Take a look at some of our actual on-site work. Featured below is our current sewer construction project at Bankenveld (2026), showcasing our excavation, pipelaying, and civil engineering capabilities.</p>
+    <p class="ref-intro">Take a look at some of our actual on-site work. Featured below are our civil engineering and excavation projects—such as the Bankenveld Sewer Construction (2026)—alongside our professional cleaning service contracts.</p>
     
     <div class="gallery-grid">
       <div class="gallery-card">
@@ -807,6 +863,20 @@
         <div class="gallery-info">
           <span class="gallery-tag">Infrastructure</span>
           <h4 class="gallery-title">Manhole & Connection Setup</h4>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="assets/cleaning_team.jpg" alt="Makhafola-Khafo Professional Cleaning Team" loading="lazy">
+        <div class="gallery-info">
+          <span class="gallery-tag">Cleaning Services</span>
+          <h4 class="gallery-title">Professional Cleaning Team</h4>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="assets/cleaning_project.png" alt="Makhafola-Khafo Post-Construction Cleaning Project" loading="lazy">
+        <div class="gallery-info">
+          <span class="gallery-tag">Cleaning Services</span>
+          <h4 class="gallery-title">Post-Construction Clean</h4>
         </div>
       </div>
     </div>
